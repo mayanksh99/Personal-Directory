@@ -1,0 +1,29 @@
+<%include ../partials/nav %>
+
+
+<div class="jumbotron">
+	<h3>Edit</h3>
+	<form action="/edit/<%= info.id %>" method="POST">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" name="Name" placeholder="Full Name" value="<%= info.name%>" required
+				autofocus>
+		</div>
+		<div class="form-group">
+			<label for="number">Mobile Number</label>
+			<input type="" class="form-control" name="mobileNumber" placeholder="Mobile Number"
+				value="<%= info.mob_number %>">
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="optradio" checked>Birthday</label>
+		  </div>
+		  <div class="radio">
+			<label><input type="radio" name="optradio">Anniversary</label>
+		  </div>
+		<div class="form-group">
+			<label class="control-label" for="date">Date</label>
+			<input class="form-control" id="date" name="DOB" placeholder="MM/DD/YYY" type="text" value="<%= info.dob %>" />
+		</div>
+		<button type="submit" class="btn btn-primary">Add</button>
+	</form>
+</div>

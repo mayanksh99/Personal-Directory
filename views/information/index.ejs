@@ -1,0 +1,22 @@
+<%include ../partials/nav %>
+<%include ../partials/msg %>
+
+<% result.forEach((res) => { %>
+<div class="container">
+    <div class="card card-title">
+        <div class="container">
+            <h3><%= res.name %></h3>
+            <p><%= res.mob_number %></p>
+            <p><strong><%= res.anniORbday %>-</strong><%= res.dob %> </p>
+            <div class="row align-items-center ">
+                <div class="col mb-2">
+                    <a class="btn btn-primary btn-sm " href="/edit/<%= res.id %>">Edit</a>
+                    <a href="/index/<%= res.id %>" onclick="return confirm('Are you sure you want to delete this item');"
+                        class="btn btn-danger btn-sm" title="Delete"> Delete</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% }) %>
